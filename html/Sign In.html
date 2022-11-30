@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize ربط ملف ال -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Font Awessome Library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courgette&family=Dancing+Script:wght@400;600;700&family=Kaushan+Script&family=Lobster&family=PT+Serif:wght@400;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@500&family=Satisfy&family=Staatliches&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- tab image -->
+    <link rel="shortcut icon" href="../Images/ak-shark (1).png">
+    <!-- css ربط ملف ال -->
+    <link rel="stylesheet" href="../css/Sign In.css">
+    <title>AK-SHARK || Sign In</title>
+</head>
+<body>
+    <!-- Start header -->
+    <header id="header">
+        <div class="container">
+            <div class="title flex">
+                <a href="index.html" class="flex">A</a>
+                <a href="index.html" class="flex">K</a>
+                <a href="index.html" class="flex">-</a>
+                <a href="index.html" class="flex">S</a>
+                <a href="index.html" class="flex">H</a>
+                <a href="index.html" class="flex">A</a>
+                <a href="index.html" class="flex">R</a>
+                <a href="index.html" class="flex">K</a>
+            </div>
+            <nav>
+                <i class="fa-solid fa-bars burger-nav">
+                    <div class="parent-menu">
+                        <ul class="links">
+                            <li><a href="index.html" class="flex">Home</a></li>
+                            <li><a href="products.html" class="flex">Products</a></li>
+                            <li><a href="About Us.html" class="flex">About Us</a></li>
+                            <li><a href="contact.html" class="flex">Contact</a></li>
+                        </ul>
+                        <div class="sign-mobile flex">
+                            <a href="Sign In.html">Sign In</a>
+                            <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                    </div>
+                </i>
+                <ul class="main-nav">
+                    <li><a href="index.html" class="flex">Home</a></li>
+                    <li class="flex">/</li>
+                    <li><a href="products.html" class="flex">Products</a></li>
+                    <li class="flex">/</li>
+                    <li><a href="About Us.html" class="flex">About Us</a></li>
+                    <li class="flex">/</li>
+                    <li><a href="contact.html" class="flex">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="sign flex">
+                <a href="Sign In.html" class="visit">Sign In</a>
+                <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
+            </div>
+        </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Start Information -->
+    <div class="information">
+        <div class="container">
+            <h1>Sign in</h1>
+            <div class="link">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Ak-Shark</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Information -->
+
+    <!-- Start Sign In -->
+    <div class="sign-in">
+        <div class="container">
+            <div class="main-sign">
+                <h1>Sign in</h1>
+                <ul class="flex">
+                    <li>
+                        <a href="https://www.facebook.com/waseemabdalhady" target="_blank">
+                            <i class="fa-brands fa-facebook-f flex"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/waseemabdelhadi" target="_blank">
+                            <i class="fa-brands fa-behance flex"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/waseem-abd-elhadi-1b293624b" target="_blank">
+                            <i class="fa-brands fa-linkedin-in flex"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Waseemko-ayman" target="_blank">
+                            <i class="fa-brands fa-github flex"></i>
+                        </a>
+                    </li>
+                </ul>
+                <form class="flex">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <a href="Reset Pass.html">Forgot your password?</a>
+                    <button>SIGN IN</button>
+                </form>
+            </div>
+            <div class="sign-up flex">
+                <h1>Sign Up</h1>
+                <p>Sign up here if you don't have account</p>
+                <button onclick="redirectMe('Sign Up.html')">SIGN UP</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Sign -->
+    <script src="../Js/ak-shark.js"></script>
+</body>
+</html>

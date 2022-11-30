@@ -1,0 +1,640 @@
+/* Start Variable */
+:root {
+    --main-color: #ffc75a;
+    --second-color: #1f1f1f;
+    --third-color: white;
+    --background-color: #fffaf7;
+    --main-transition: 0.5s;
+    --section-padding: 50px;
+    --section-padding: 50px;
+    --main-font: 'Courgette', cursive;
+    --font-weight: normal;
+    /* padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); */
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--third-color);
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Playfair Display', serif; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.goto-up i {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--third-color);
+    color: var(--second-color);
+    background-color: var(--main-color);
+    font-size: 22px;
+    right: 50px;
+    bottom: 40px;
+    z-index: 500;
+}
+
+/* FrameWork */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* FrameWork */
+
+/* اعملت هاي علشان بدي اللون اللي ورا يملا الشاشة لكن الكونتنت اللي ورا تملا من الاول للاخر */
+.container {
+    /* كتبنا ال بادنك علشان الكلام في نسخة الموبايل ما يبلش من اول الشاشة */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* علشان الكونتينر يمسك العناصر في النص */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* Start Component */
+.text a.button {
+    color: var(--third-color);
+    border-radius: 15px 0 15px;
+}
+
+.visit {
+    color: var(--main-color) !important;
+}
+/* End Component */
+
+/******************************************************************************************************/
+
+/* Start Header */
+header {
+    background-color: var(--third-color);
+    position: relative;
+}
+
+header nav .main-nav > li > a::selection,
+header .container .logo::selection {
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+header .container {
+    height: 73.56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    header .container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+header .container .title {
+    gap: 2px;
+    height: 73.56px;
+}
+
+header .title a {
+    color: var(--second-color);
+    font-size: 20px;
+    font-weight: bold;
+    transition: var(--main-transition);
+    animation: up-down 1s infinite alternate;
+}
+
+header .title a:nth-child(2) {
+    animation-delay: .2s;
+}
+header .title a:nth-child(3) {
+    animation-delay: .3s;
+}
+header .title a:nth-child(4) {
+    animation-delay: .4s;
+}
+header .title a:nth-child(5) {
+    animation-delay: .5s;
+}
+header .title a:nth-child(6) {
+    animation-delay: .6s;
+}
+header .title a:nth-child(7) {
+    animation-delay: .7s;
+}
+header .title a:nth-child(8) {
+    animation-delay: .8s;
+}
+
+@keyframes up-down {
+    to {
+        transform: translateY(-13px);
+    }
+}
+
+header nav .main-nav {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 991px) {
+    header nav .main-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    header nav .burger-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    header nav .burger-nav {
+        width: 100%;
+        color: var(--second-color);
+        font-size: 25px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    header nav .burger-nav .parent-menu {
+        position: absolute;
+        left: -229px;
+        top: 35px;
+        width: 250px;
+        z-index: 1;
+        background-color: var(--second-color);
+        border-radius: 6px 0 6px 6px;
+        display: none;
+    }
+
+    header nav .burger-nav .parent-menu::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -20px;
+        border-style: solid;
+        border-color: transparent transparent var(--second-color) transparent;
+        border-width: 10px;
+    }
+
+    header nav .burger-nav .parent-menu ul.links {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        transition: top var(--main-transition), opacity var(--main-transition);
+    }
+
+    header nav .burger-nav .parent-menu ul.links li {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    header nav .burger-nav .parent-menu ul.links li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    header nav .burger-nav .parent-menu ul.links li:hover a {
+        color: var(--main-color);
+    }
+
+    header nav .burger-nav .parent-menu ul.links > li > a {
+        color: var(--third-color);
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: normal !important;
+        position: relative;
+        overflow: hidden;
+        transition: var(--main-transition);
+    }
+
+    header nav .burger-nav .sign-mobile {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    header nav .burger-nav .sign-mobile a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        transition: var(--main-transition);
+    }
+
+    header nav .burger-nav .sign-mobile a:hover {
+        color: var(--third-color);
+        background-color: var(--main-color);
+    }
+
+    header nav .burger-nav .sign-mobile button {
+        font-size: 18px;
+        color: var(--second-color);
+        background-color: var(--third-color);
+        transition: var(--main-transition);
+    }
+
+    header nav .burger-nav .sign-mobile button:hover {
+        background-color: var(--main-color);
+        color: var(--third-color);
+    }
+
+    header nav .burger-nav .sign-mobile button::after {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+header nav .main-nav > li > a {
+    color: var(--second-color);
+    height: 73.56px;
+    padding: 0 20px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+header nav .main-nav > li > a:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    header .main-nav > li > a {
+        padding: 10px;
+        font-size: 15px;
+        height: 40px;
+    }
+}
+
+header nav .main-nav > li > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+header nav .main-nav > li > a:hover::after {
+    width: 100%;
+}
+
+header .sign {
+    height: 73.56px;
+    gap: 15px;
+}
+
+@media (max-width: 991px) {
+    header .sign {
+        display: none;
+    }
+}
+
+/* @media (max-width: 767px) {
+    header .sign {
+        order: -1;
+    }
+} */
+
+header .sign a,
+header nav .burger-nav .sign-mobile a {
+    color: var(--second-color);
+    border: 1px solid var(--second-color);
+    padding: 5px 15px;
+    background-color: var(--third-color);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+header .sign a:hover {
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+header .sign button,
+header nav .burger-nav .sign-mobile button {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+
+header .sign button {
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+header .sign button::after,
+header nav .burger-nav .sign-mobile button::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+}
+
+header .sign button::after {
+    width: 12px;
+    height: 12px;
+}
+/* End Header */
+
+/******************************************************************************************************/
+
+/* Start Information */
+.information {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--main-color);
+    margin-top: 40px;
+    border-top: 2px dashed var(--second-color);
+    border-bottom: 2px dashed var(--second-color);
+    position: relative;
+}
+
+.information .container {
+    text-align: center;
+}
+
+.information h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: var(--second-color);
+    letter-spacing: 5px;
+}
+
+.information .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: var(--second-color);
+}
+
+.information .link a {
+    color: var(--second-color);
+    transition: var(--main-transition);
+}
+
+.information .link a:hover {
+    color: var(--third-color);
+}
+
+.information .link span:first-of-type {
+    font-size: 25px;
+    font-weight: normal;
+}
+/* End Information */
+
+/******************************************************************************************************/
+
+/* Start Sign In */
+.sign-in {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--third-color);
+    position: relative;
+}
+
+.sign-in .container {
+    background-color: var(--third-color);
+    box-shadow: 0 0 10px #ccc;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .sign-in .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .sign-in .container {
+        gap: 150px;
+        box-shadow: none;
+    }
+}
+
+.sign-in .container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--main-color);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); 
+}
+
+@media (max-width: 991px) {
+    .sign-in .container::before {
+        left: 0;
+        top: -20px;
+        width: 100%;
+        height: 50%;
+        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    }
+}
+
+/* @media (min-width: 767px) {
+    .sign-in form {
+        margin-top: 50px;
+    }
+} */
+
+.sign-in .container img {
+    max-width: 100%;
+    width: 350px;
+    z-index: 1;
+    
+}
+
+.sign-in .main-sign {
+    z-index: 2;
+    max-width: 100%;
+}
+
+@media (min-width: 1190px) {
+    .sign-in .main-sign {
+        transform: translateX(-50px);
+    }
+}
+
+.sign-in form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.sign-in form input,
+.sign-in form textarea {
+    max-width: 100%;
+    width: 400px;
+    padding: 0 10px;
+    border: none;
+    transition: var(--main-transition);
+}
+
+.sign-in form textarea {
+    height: 200px;
+}
+
+.sign-in form input:not(input[type="submit"]):focus,
+.sign-in form textarea:focus {
+    border-color: var(--second-color);
+}
+
+.sign-in form input:not(input[type="submit"]) ,
+.sign-in form textarea {
+    background: transparent;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.sign-in form input:not(textarea) {
+    height: 40px;
+}
+
+.sign-in form input[type="submit"] {
+    background-color: var(--main-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.sign-in form input[type="submit"]:hover {
+    color: var(--third-color);
+    background-color: var(--second-color);
+}
+
+.sign-in form textarea {
+    resize: none;
+    margin-top: 10px;
+}
+
+.sign-in form input::placeholder,
+.sign-in form textarea::placeholder {
+    transition: var(--main-transition);
+    font-size: 15px;
+}
+
+.sign-in form input:focus,
+.sign-in form textarea:focus {
+    outline: none;
+}
+
+.sign-in form input:focus::placeholder,
+.sign-in form textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.sign-in .main-sign ul {
+    gap: 15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+    .sign-in .main-sign ul {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+}
+
+.sign-in .main-sign ul li i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--third-color);
+    font-size: 18px;
+}
+
+.sign-in .main-sign ul li:first-child i {
+    background-color: #1877f2;
+}
+.sign-in .main-sign ul li:nth-child(2) i {
+    background-image: linear-gradient(to bottom left, #405de6, #833ab4, #c13584, #e1306c);
+}
+.sign-in .main-sign ul li:nth-child(3) i {
+    background-color: #ff0000;
+}
+.sign-in .main-sign ul li:nth-child(4) i {
+    background-color: #e60023;
+}
+.sign-in .main-sign ul li:nth-child(5) i {
+    background-color: #1769ff;
+}
+.sign-in .main-sign ul li:nth-child(6) i {
+    background-color: #0077b5;
+}
+.sign-in .main-sign ul li:last-child i {
+    background-color: var(--second-color);
+}
+
+/* End Sign In */
