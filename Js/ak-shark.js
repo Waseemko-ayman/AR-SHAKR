@@ -4,14 +4,15 @@ window.onload = function () {
     input.focus();
 };
 
-/***************************************/
-
+/***********************************************************************/
+// Move between pages
 function redirectMe(url) {
     window.location = url;
 }
 
-/***************************************/
+/***********************************************************************/
 
+// Scroll bar
 let myButton = document.getElementById("group");
 let header = document.getElementById("header");
 
@@ -33,21 +34,25 @@ myButton.onclick = function () {
     window.scrollTo(0, 0);
 }
 
-/***************************************/
-// إخفاء وإظهار القائمة المسندلة
+/***********************************************************************/
 
-let menu = document.querySelector(".burger-nav");
-let listMenu = document.querySelector(".parent-menu");
+// Nav Bar (Menu)
+let burger = document.getElementById("bar");
+let navBar = document.getElementById("navbar");
+let closeIcon = document.getElementById("close");
 
+if (burger) {
+    burger.addEventListener("click", function () {
+        navBar.classList.add("active");
+    })
+};
 
-menu.onclick = function () {
-    if (listMenu.style.display === "block") {
-        listMenu.style.display = "none";
-    } else {
-        listMenu.style.display = "block";
-    }
-} 
-/***************************************/
+if (closeIcon) {
+    closeIcon.addEventListener("click", function () {
+        navBar.classList.remove("active");
+    })
+};
+/***********************************************************************/
 
 // let button = document.getElementById("button");
 // let passWord = document.querySelector("[type= 'password']");
@@ -62,7 +67,7 @@ menu.onclick = function () {
 // }
 
 
-/***************************************/
+/***********************************************************************/
 
 // let icon = document.getElementById("icon");
 // let addToCard = document.getElementById("addCard");

@@ -34,22 +34,9 @@
                 <a href="index.html" class="flex">R</a>
                 <a href="index.html" class="flex">K</a>
             </div>
-            <nav>
-                <i class="fa-solid fa-bars burger-nav">
-                    <div class="parent-menu">
-                        <ul class="links">
-                            <li><a href="index.html" class="flex">Home</a></li>
-                            <li><a href="products.html" class="flex">Products</a></li>
-                            <li><a href="About Us.html" class="flex visit">About Us</a></li>
-                            <li><a href="contact.html" class="flex">Contact</a></li>
-                        </ul>
-                        <div class="sign-mobile flex">
-                            <a href="Sign In.html">Sign In</a>
-                            <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                    </div>
-                </i>
+            <nav id="navbar">
                 <ul class="main-nav">
+                    <li><i class="fas fa-times" id="close"></i></li>
                     <li><a href="index.html" class="flex">Home</a></li>
                     <li class="flex">/</li>
                     <li><a href="products.html" class="flex">Products</a></li>
@@ -57,8 +44,13 @@
                     <li><a href="About Us.html" class="flex visit">About Us</a></li>
                     <li class="flex">/</li>
                     <li><a href="contact.html" class="flex">Contact</a></li>
+                    <li><a href="Sign In.html" id="sign">Sign In</a></li>
                 </ul>
             </nav>
+            <div id="mobile" class="flex">
+                <a href="basket.html" class="flex"><i class="fa-solid fa-basket-shopping"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
             <div class="sign flex">
                 <a href="Sign In.html">Sign In</a>
                 <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
@@ -66,6 +58,10 @@
         </div>
     </header>
     <!-- End header -->
+
+    <button id="group" class="goto-up">
+        <i class="fa-solid fa-angle-up flex"></i>
+    </button>
 
     <!-- Start Information -->
     <div class="information">
@@ -88,9 +84,7 @@
                 <span>My programming</span>
                 <h1>Waseem A. Abd Elhadi</h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam ab, quod debitis exercitationem 
-                    expedita natus, molestiae tempore commodi voluptatem nam autem et sunt ipsa ullam aut dolor 
-                    corporis ex obcaecati.
+                    Computer System Engineering, Al-Azhar University, Front-End Developer.
                 </p>
                 <div class="info">
                     <div class="unit">
@@ -103,7 +97,7 @@
                     </div>
                     <div class="unit">
                         <span><i class="fa-solid fa-envelope"></i> Email ID :</span>
-                        <span>waseem.abedalhady@gmail.com</span>
+                        <a href="mailto:waseem.abedalhady@gmail.com"><span>waseem.abedalhady@gmail.com</span></a>
                     </div>
                 </div>
                 <div class="expertise">
@@ -157,6 +151,120 @@
         </div>
     </div>
     <!-- End About Us -->
+
+        <!-- Start Subscribe -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="box">
+                <h1>Subscribe To Our Newsletter</h1>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Subscribe -->
+
+    <!-- Start Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="main-footer">
+                <div class="title">
+                    <div class="logo flex">
+                        <a href="index.html" class="flex">A</a>
+                        <a href="index.html" class="flex">K</a>
+                        <a href="index.html" class="flex">-</a>
+                        <a href="index.html" class="flex">S</a>
+                        <a href="index.html" class="flex">H</a>
+                        <a href="index.html" class="flex">A</a>
+                        <a href="index.html" class="flex">R</a>
+                        <a href="index.html" class="flex">K</a>
+                    </div>
+                    <p>The world's largest petroleum energy provider</p>
+                </div>
+                <div class="lists">
+                    <div class="box">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Source</a></li>
+                            <li><a href="#">Fuil oil</a></li>
+                            <li><a href="#">Midlle distillate</a></li>
+                            <li><a href="#">LPG</a></li>
+                            <li><a href="#">Naptha</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><a href="#">Our people</a></li>
+                            <li><a href="#">Our activities</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h4>Our principles</h4>
+                        <ul>
+                            <li><a href="#">Corporate principles</a></li>
+                            <li><a href="#">Independent inspections</a></li>
+                            <li><a href="#">Best practices</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h4>Info</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Cookie & help</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms & conditions</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="social">
+                <p>&copy; 2022 Programming Rights Belong to Waseem Abd Elhadi</p>
+                <ul class="flex">
+                    <li class="flex">
+                        <a href="https://www.facebook.com/waseemabdalhady" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.instagram.com/waseem.abdalhady/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.youtube.com/c/waseemabdalhady" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.pinterest.com/waseemabdelhadi178/" target="_blank">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.behance.net/waseemabdelhadi" target="_blank">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://www.linkedin.com/in/waseem-abd-elhadi-1b293624b" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a href="https://github.com/Waseemko-ayman" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
     <script src="../Js/ak-shark.js"></script>
 </body>

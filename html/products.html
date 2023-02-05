@@ -34,22 +34,9 @@
                 <a href="index.html" class="flex">R</a>
                 <a href="index.html" class="flex">K</a>
             </div>
-            <nav>
-                <i class="fa-solid fa-bars burger-nav">
-                    <div class="parent-menu">
-                        <ul class="links">
-                            <li><a href="index.html" class="flex">Home</a></li>
-                            <li><a href="products.html" class="flex visit">Products</a></li>
-                            <li><a href="About Us.html" class="flex">About Us</a></li>
-                            <li><a href="contact.html" class="flex">Contact</a></li>
-                        </ul>
-                        <div class="sign-mobile flex">
-                            <a href="Sign In.html">Sign In</a>
-                            <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                    </div>
-                </i>
+            <nav id="navbar">
                 <ul class="main-nav">
+                    <li><i class="fas fa-times" id="close"></i></li>
                     <li><a href="index.html" class="flex">Home</a></li>
                     <li class="flex">/</li>
                     <li><a href="products.html" class="flex visit">Products</a></li>
@@ -57,8 +44,13 @@
                     <li><a href="About Us.html" class="flex">About Us</a></li>
                     <li class="flex">/</li>
                     <li><a href="contact.html" class="flex">Contact</a></li>
+                    <li><a href="Sign In.html" id="sign">Sign In</a></li>
                 </ul>
             </nav>
+            <div id="mobile" class="flex">
+                <a href="basket.html" class="flex"><i class="fa-solid fa-basket-shopping"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
             <div class="sign flex">
                 <a href="Sign In.html">Sign In</a>
                 <button id="icon" class="flex" onclick="redirectMe('basket.html')"><i class="fa-solid fa-basket-shopping"></i></button>
@@ -304,6 +296,20 @@
         </div>
     </div>
     <!-- End Products -->
+
+        <!-- Start Subscribe -->
+        <div class="subscribe">
+            <div class="container">
+                <div class="box">
+                    <h1>Subscribe To Our Newsletter</h1>
+                    <form>
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Subscribe -->
 
     <!-- Start Footer -->
     <footer id="footer">
