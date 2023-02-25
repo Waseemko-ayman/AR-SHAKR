@@ -17,6 +17,7 @@
     <!-- tab image -->
     <link rel="shortcut icon" href="../Images/ak-shark (1).png">
     <!-- css ربط ملف ال -->
+    <link rel="stylesheet" href="../css/AR-SHARK.css">
     <link rel="stylesheet" href="../css/Sign In.css">
     <title>AK-SHARK || Sign In</title>
 </head>
@@ -103,11 +104,11 @@
                         </a>
                     </li>
                 </ul>
-                <form class="flex">
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
+                <form id="register" class="flex">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
                     <a href="Reset Pass.html">Forgot your password?</a>
-                    <button>SIGN IN</button>
+                    <button id="button">SIGN IN</button>
                 </form>
             </div>
             <div class="sign-up flex">
@@ -124,8 +125,8 @@
         <div class="container">
             <div class="box">
                 <h1>Subscribe To Our Newsletter</h1>
-                <form>
-                    <input type="email" placeholder="Enter your email" required>
+                <form id="register">
+                    <input type="email" placeholder="Enter your email">
                     <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
@@ -233,6 +234,7 @@
     </footer>
     <!-- End Footer -->
 
+    <script src="../Js/signIn.js"></script>
     <script src="../Js/ak-shark.js"></script>
 </body>
 </html>

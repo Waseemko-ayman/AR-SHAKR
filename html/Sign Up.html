@@ -17,6 +17,7 @@
     <!-- tab image -->
     <link rel="shortcut icon" href="../Images/ak-shark (1).png">
     <!-- css ربط ملف ال -->
+    <link rel="stylesheet" href="../css/AR-SHARK.css">
     <link rel="stylesheet" href="../css/Sign Up.css">
     <title>AK-SHARK || Sign Up</title>
 </head>
@@ -90,25 +91,27 @@
                 </div>
             </div>
             <div class="main-sign">
-                <form>
+                <form id="register" name="sign-up-form" method="get">
                     <div class="box">
                         <div class="unit">
                             <i class="fa-solid fa-user"></i>
-                            <input type="username" placeholder="First Name" required>
+                            <input type="username" name="username" placeholder="First Name">
                         </div>
                         <div class="unit">
                             <i class="fa-solid fa-user"></i>
-                            <input type="username" placeholder="Last Name" required>
+                            <input type="username" name="username" placeholder="Last Name">
                         </div>
                     </div>
+                    <p class="error username-error"></p>
                     <div class="unit">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" name="email" placeholder="Email Address">
                     </div>
+                    <p class="error email-error"></p>
                     <div class="unit">
                         <div class="postal-code">
                             <i class="fa-solid fa-phone"></i>
-                            <select id="list" name="Menu">
+                            <select id="list" name="Menu" required>=
                                 <optgroup label="Phone">
                                     <option value="0" class="active" selected>+970</option>
                                     <option value="1">+972</option>
@@ -141,8 +144,9 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="text" name="phone" maxlength="15" placeholder="Phone Number">
                     </div>
+                    <p class="error phone-error"></p>
                     <div class="unit">
                         <i class="fa-solid fa-briefcase"></i>
                         <select id="list" class="active" name="Menu">
@@ -155,32 +159,39 @@
                         </select>
                     </div>
                     <div class="box">
-                        <div class="unit">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" placeholder="Password"required>
+                        <div class="passErrorMsg">
+                            <div class="unit">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                            <p class="error password-error"></p>
                         </div>
-                        <div class="unit">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" placeholder="Confirm Password" required>
+                        <div class="passErrorMsg">
+                            <div class="unit">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" name="confirm-password" placeholder="Confirm Password">
+                            </div>
+                            <p class="error confirm-password-error"></p>
                         </div>
                     </div>
-                    <input type="submit" value="Create your account" required>
-                    <hr>
-                    <div class="social">
-                        <a href="https://ar-ar.facebook.com/" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            Continue with Facebook
-                        </a>
-                        <a href="https://twitter.com/i/flow/login" target="_blank">
-                            <i class="fa-brands fa-twitter"></i>
-                            Continue with Twitter
-                        </a>
-                    </div>
-                    <div class="sign-in flex">
-                        <p>Already Registered?</p>
-                        <a href="Sign In.html">Sign In</a>
-                    </div>
+                    <button id="button">Create your account</button>
+                    <p class="error register-error"></p>
                 </form>
+                <hr>
+                <div class="social">
+                    <a href="https://ar-ar.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Continue with Facebook
+                    </a>
+                    <a href="https://twitter.com/i/flow/login" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                        Continue with Twitter
+                    </a>
+                </div>
+                <div class="sign-in flex">
+                    <p>Already Registered?</p>
+                    <a href="Sign In.html">Sign In</a>
+                </div>
             </div>
         </div>
     </div>
@@ -300,6 +311,7 @@
     </footer>
     <!-- End Footer -->
 
+    <script src="../Js/signUp.js"></script>
     <script src="../Js/ak-shark.js"></script>
 </body>
 </html>
